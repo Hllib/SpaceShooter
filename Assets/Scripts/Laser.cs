@@ -18,7 +18,7 @@ public class Laser : MonoBehaviour
     {
         _audioSource = GetComponent<AudioSource>();
 
-        if(_audioSource != null)
+        if (_audioSource != null)
         {
             _audioSource.clip = _laserFireSound;
             _audioSource.Play();
@@ -81,8 +81,11 @@ public class Laser : MonoBehaviour
 
             if (_enemy != null && _player != null)
             {
-                _enemy.ExplodeEnemy();
                 _player.AddToScore(10);
+            }
+            if (_enemy != null)
+            {
+                _enemy.ExplodeEnemy();
             }
 
             Destroy(this.gameObject);

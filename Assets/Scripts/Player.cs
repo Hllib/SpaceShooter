@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
     public float PowerUpCoolDownRate = 5.0f;
     private float _canFire = 0.0f;
 
+    [SerializeField]
     private int _lives = 3;
     public int Score = 0;
     public static int BestScore;
